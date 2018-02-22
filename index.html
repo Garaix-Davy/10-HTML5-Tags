@@ -1,1 +1,34 @@
-# 10-HTML5-Tags
+<!DOCTYPE HTML>
+<html lang="en-us">
+<head>
+	<meta charset="utf-8">
+	<title>HTML 5 Tags</title>
+
+<link rel="stylesheet" type="text/css" href="css/style.css">
+
+</head>
+
+<body>
+
+  <h1>Code Topic 10 - HTML5 Tags</h1>
+	<h4>HTML5 Tags - Video, Audio, and Canvas</h4>
+	<hr></hr>
+	<h2>Move your mouse over the video. The canvas will adjust its color based on mouse coordinates.</h2>
+	<div id="debug"></div>
+
+<div class="container">
+  <video class="video" id="atomica" autoplay loop src="https://garaix-davy.github.io/10-HTML5-Tags/Atomica.mp4" onplay="resize_canvas(this)"></video>
+  <canvas class="canvas" id="overlay"></canvas>
+</div>
+<h2>Click on video to draw circles. Click longer for bigger circles.</h2>
+<h2>This is the sounds effect when drawing circles:</h2>
+<audio id="sfx" controls>
+	<source src="https://garaix-davy.github.io/10-HTML5-Tags/circle.mp3">
+</audio>
+<br>
+<button onclick="resetCanvas()">Reset Canvas</button>
+<script language="JavaScript" type="text/javascript" src="js/functions.js"></script>
+
+</body>
+
+</html>

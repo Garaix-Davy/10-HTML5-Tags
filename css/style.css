@@ -1,0 +1,19 @@
+.container {
+  margin: 0 auto;
+  position: relative;
+}
+
+.video {
+  width: 100%;
+  height: auto;
+  top: 0;
+  left: 0;
+}
+
+.canvas {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 999;
+  background-color:rgba(255,128,0,0.3);
+}
