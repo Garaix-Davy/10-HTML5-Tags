@@ -15,6 +15,7 @@ var context = canvas.getContext('2d');
 var size = 0;
 var keepDrawing;
 var randomColor;
+var num = 0;
 
 canvas.addEventListener("mousedown", function(evt){
   randomColor = "#"+dec2webhex(Math.random(16581375)*16581375);
@@ -33,6 +34,7 @@ canvas.addEventListener("mouseup", function(evt){
   size = 0;
   clearInterval(keepDrawing);
     document.getElementById("sfx").load();
+    num = Math.round(Math.random(1));
 });
 
 canvas.addEventListener("mousemove", function(evt){
@@ -46,12 +48,16 @@ canvas.addEventListener("mousemove", function(evt){
 
 
 function drawCircle(x,y,z){
-  //context.fillStyle = randomColor;
-  context.strokeStyle = randomColor;
   context.beginPath();
   context.arc(x,y,size,0,2*Math.PI);
-  //context.fill();
-  context.stroke();
+  if (num==0){
+    context.fillStyle = randomColor;
+    context.fill();
+  } else {
+    context.strokeStyle = randomColor;
+    context.stroke();
+  }
+
 }
 
 function getMousePos(canvas, evt) {
